@@ -29,7 +29,7 @@ if __name__ == '__main__':
         quit()
 
     if input_image is None:
-        print ('faild to load %s' % fileName)
+        print ('faild to load %s' % file_name)
         quit()
 
     output_image = image_process(input_image)
