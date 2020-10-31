@@ -19,7 +19,7 @@ if __name__ == '__main__':
         print ('faild to load %s' % FileName)
         quit()
 
-    ImageProcess =image_process.ImageProcess()
+    ImageProcess = image_process.ImageProcess()
     OutputImage = ImageProcess.gray_scale(InputImage)
     OutputImage.save("filtered_" + FileName)
     OutputImage.show()
