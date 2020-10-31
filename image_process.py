@@ -1,6 +1,7 @@
 from PIL import Image
 import numpy as np
 from enum import IntEnum
+from define import Color, Rgb
 
 class ImageProcess:
     def gray_scale(self, src):
@@ -15,13 +16,3 @@ class ImageProcess:
                 ArrayImage[y, x][Color.BLUE] = Rgb.MAX - ArrayImage[y, x][Color.BLUE]
 
         return Image.fromarray(np.uint8(ArrayImage))
-
-class Color(IntEnum):
-    RED = 0
-    GREEN = 1
-    BLUE = 2
-    ALPHA  = 3
-
-class Rgb(IntEnum):
-    MIN = 0
-    MAX = 255

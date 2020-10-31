@@ -1,6 +1,6 @@
 from PIL import Image
 import sys
-import image_process
+from image_process import ImageProcess
 
 if __name__ == '__main__':
     Param = sys.argv
@@ -19,7 +19,7 @@ if __name__ == '__main__':
         print ('faild to load %s' % FileName)
         quit()
 
-    ImageProcess = image_process.ImageProcess()
+    ImageProcess = ImageProcess()
     OutputImage = ImageProcess.gray_scale(InputImage)
     OutputImage.save("filtered_" + FileName)
     OutputImage.show()
